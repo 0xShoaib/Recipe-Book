@@ -7,7 +7,7 @@ import "animate.css/animate.min.css";
 
 const Card = props => {
   return (
-    <ScrollAnimation animateIn="fadeInUp" duration=".5">
+    <ScrollAnimation animateIn="fadeIn" duration=".5">
       <Link to={`/recipe/${props.id}`}>
         <div className={classes.Card} id={props.id}>
           <div className={classes.Thumbnail}>
