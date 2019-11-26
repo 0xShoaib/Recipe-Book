@@ -79,6 +79,10 @@
   .Container {
     margin: 2vh auto 2vh auto;
   }
+  .PlayerWrapper iframe {
+    height: 200px;
+    width: 400px;
+  }
   .VideoStats {
     margin-top: -30px;
   }
@@ -88,6 +92,10 @@
   }
 }
 @media (max-width: 375px) {
+  .PlayerWrapper iframe {
+    height: 180px;
+    width: 350px;
+  }
   .VideoStats {
     margin-top: -60px;
   }
@@ -97,5 +105,16 @@
   }
   .VideoDescription {
     font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .PlayerWrapper iframe {
+    height: 180px;
+    width: 250px;
+  }
+  .VideoTitle {
+    margin-top: 40px;
+    font-size: 26px;
+    letter-spacing: 1.5px;
   }
 }
