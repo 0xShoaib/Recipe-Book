@@ -1,0 +1,63 @@
+.Banner {
+  background-image: url("./banner-bg.jpg");
+
+  height: 90vh;
+
+  -webkit-filter: grayscale(70%);
+  filter: grayscale(70%);
+
+  position: relative;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Text {
+  position: absolute;
+  top: 30%;
+  left: 50px;
+
+  color: #fff;
+}
+.Text h1 {
+  letter-spacing: 1px;
+  font-size: 58px;
+}
+.Text a .Btn {
+  background-color: #24292d;
+  width: 180px;
+
+  text-align: center;
+  padding: 20px;
+
+  margin-top: 30px;
+  cursor: pointer;
+
+  border-radius: 4px;
+  transition: ease-in-out 0.2s;
+  box-shadow: 2px 4px 4px RGBA(36, 41, 45, 0.2);
+}
+.Text a {
+  text-decoration: none;
+  color: #fff;
+
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+.Text .Btn:hover {
+  color: rgb(158, 158, 158);
+}
+@media (max-width: 355px) {
+  .Text h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 355px) {
+  .Banner {
+    height: 100vh;
+  }
+  .Text {
+    left: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+.GridWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10vh;
+}

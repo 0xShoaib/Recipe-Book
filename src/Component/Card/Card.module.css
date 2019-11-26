@@ -1,0 +1,30 @@
+.Card {
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+
+  /* border-radius: 10px; */
+
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+a {
+  text-decoration: none;
+}
+.Card:hover {
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.Thumbnail img {
+  width: 100%;
+
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+}
+.Title p {
+  font-size: 20px;
+  color: #24292d;
+}
