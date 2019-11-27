@@ -27,7 +27,10 @@ class VideoWatchPage extends Component {
         })
         .catch(() => {
           console.log("Failed to Data");
+          this.props.history.push("/not-found");
         });
+    } else {
+      this.props.history.push("/not-found");
     }
   }
 
@@ -39,7 +42,7 @@ class VideoWatchPage extends Component {
           <Loader />
         ) : (
           <div className={classes.Container}>
-            <Animate appear="fadeInDown" durationAppear={2000} component="div">
+            <Animate appear="fadeInDown" durationAppear={2000}>
               <div className={classes.PlayerWrapper}>
                 <iframe
                   className={classes.VideoPlayer}
@@ -52,7 +55,7 @@ class VideoWatchPage extends Component {
                 ></iframe>
               </div>
             </Animate>
-            <Animate appear="fadeInDown" durationAppear={1000} component="div">
+            <Animate appear="fadeInDown" durationAppear={1000}>
               <div className={classes.VideoStats}>
                 <p className={classes.Views}>
                   {this.state.RecipeData.views} Views
@@ -64,7 +67,7 @@ class VideoWatchPage extends Component {
                 </div>
               </div>
             </Animate>
-            <Animate appear="fadeInUp" durationAppear={1000} component="div">
+            <Animate appear="fadeInUp" durationAppear={1000}>
               <div>
                 <h1 className={classes.VideoTitle}>
                   {this.state.RecipeData.title}

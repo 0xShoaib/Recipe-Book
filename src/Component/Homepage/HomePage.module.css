@@ -8,7 +8,7 @@
 
   position: relative;
 
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -49,15 +49,16 @@
   color: rgb(158, 158, 158);
 }
 @media (max-width: 355px) {
-  .Text h1 {
-    font-size: 48px;
-  }
-}
-@media (max-width: 355px) {
   .Banner {
     height: 100vh;
   }
   .Text {
     left: 20px;
+  }
+  .Text h1 {
+    font-size: 48px;
+  }
+  .Text a .Btn {
+    width: 140px;
   }
 }

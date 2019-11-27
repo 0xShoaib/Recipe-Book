@@ -12,14 +12,14 @@ function HomePage() {
       <div className={classes.Banner}></div>
 
       <div className={classes.Text}>
-        <Animate appear="fadeInUp" durationAppear={3000} component="h1">
+        <Animate appear="fadeInUp" durationAppear={3000}>
           <h1>
             A messy kitchen
             <br /> is a sign of happiness.
           </h1>
         </Animate>
         <Link to="/recipe">
-          <Animate appear="fadeInUp" durationAppear={3000} component="div">
+          <Animate appear="fadeInUp" durationAppear={3000}>
             <div className={classes.Btn}>
               <p>Discover</p>
             </div>
