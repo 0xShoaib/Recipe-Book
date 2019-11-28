@@ -11,7 +11,17 @@ class Login extends Component {
     password: ""
   };
 
-  onSubmit = () => {};
+  userData = [];
+
+  onSubmit = e => {
+    e.preventDefault();
+
+    this.props.onUserLogedIn();
+
+    this.props.history.push("/recipe");
+
+    localStorage.setItem("loginStatus", true);
+  };
   onInputChange = (e, name) => {
     switch (name) {
       case "username":
@@ -31,7 +41,7 @@ class Login extends Component {
         <Topbar />
         <Animate appear="zoomIn" durationAppear={1000}>
           <div className={classes.Container}>
-            <form className={classes.Form}>
+            <form className={classes.Form} onSubmit={this.onSubmit}>
               <input
                 className={classes.InputField}
                 type="text"

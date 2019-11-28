@@ -5,10 +5,15 @@ import Animate from "animate.css-react";
 import classes from "./HomePage.module.css";
 import Topbar from "../Topbar/Topbar";
 
-function HomePage() {
+function HomePage(props) {
   return (
     <div className="HomePageWrapper">
-      <Topbar />
+      <Topbar
+        slideInLeft="slideInLeft"
+        fadeInRight="fadeInRight"
+        onUserLogedOut={props.onUserLogedOut}
+        loginStatus={props.loginStatus}
+      />
       <div className={classes.Banner}></div>
 
       <div className={classes.Text}>

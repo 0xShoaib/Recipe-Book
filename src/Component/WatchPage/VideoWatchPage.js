@@ -37,7 +37,10 @@ class VideoWatchPage extends Component {
   render() {
     return (
       <div>
-        <Topbar />
+        <Topbar
+          loginStatus={this.props.loginStatus}
+          onUserLogedOut={this.props.onUserLogedOut}
+        />
         {this.state.LoadingStatus ? (
           <Loader />
         ) : (

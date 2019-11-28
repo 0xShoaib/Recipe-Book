@@ -25,18 +25,32 @@ class Recipes extends Component {
   }
   render() {
     const CardGrid = this.state.CardGridData.map(item => {
-      return (
+      return item.id > 6 ? (
         <Card
           key={item.id}
           id={item.id}
           thumbnail={item.thumbnail}
           title={item.title}
+          display="block"
+          pointerEvents="none"
+        />
+      ) : (
+        <Card
+          key={item.id}
+          id={item.id}
+          thumbnail={item.thumbnail}
+          title={item.title}
+          display="none"
+          pointerEvents="auto"
         />
       );
     });
     return (
       <div>
-        <Topbar />
+        <Topbar
+          loginStatus={this.props.loginStatus}
+          onUserLogedOut={this.props.onUserLogedOut}
+        />
         {this.state.LoadingStatus ? (
           <Loader />
         ) : (

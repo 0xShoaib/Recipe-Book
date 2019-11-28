@@ -4,36 +4,37 @@ import Animate from "animate.css-react";
 
 import classes from "./Topbar.module.css";
 
-const Topbar = () => {
+const Topbar = props => {
   return (
     <div className={classes.navBar}>
-      <Animate appear="slideInLeft" durationAppear={2000}>
+      <Animate appear={props.slideInLeft} durationAppear={2000}>
         <div className={classes.logo}>
-          <h1>Recipe</h1>
+          <Link to="/">
+            <h1>Recipe</h1>
+          </Link>
         </div>
       </Animate>
 
       <div className={classes.menu}>
         <ul>
-          <Animate appear="fadeInRight" durationAppear={1000}>
+          <Animate appear={props.fadeInRight} durationAppear={1000}>
             <li>
               <Link to="/">Home</Link>
             </li>
           </Animate>
-          <Animate appear="fadeInRight" durationAppear={1000}>
+          <Animate appear={props.fadeInRight} durationAppear={1000}>
             <li>
               <Link to="/recipe">Recipes</Link>
             </li>
           </Animate>
-          <Animate appear="fadeInRight" durationAppear={1000}>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </Animate>
-          <Animate appear="fadeInRight" durationAppear={1000}>
-            <li className={classes.signUp}>
-              <Link to="/">Sign up</Link>
-            </li>
+          <Animate appear={props.fadeInRight} durationAppear={1000}>
+            {props.loginStatus ? (
+              <li onClick={props.onUserLogedOut}>Logout</li>
+            ) : (
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            )}
           </Animate>
         </ul>
       </div>
