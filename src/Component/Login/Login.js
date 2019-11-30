@@ -47,6 +47,7 @@ class Login extends Component {
                 type="text"
                 name="username"
                 placeholder="Username"
+                required
                 value={this.state.username}
                 onChange={e => this.onInputChange(e, "username")}
               />
@@ -55,6 +56,7 @@ class Login extends Component {
                 type="password"
                 name="password"
                 placeholder="Password"
+                required
                 value={this.state.password}
                 onChange={e => this.onInputChange(e, "password")}
               />

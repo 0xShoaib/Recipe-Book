@@ -28,12 +28,6 @@ class App extends React.Component {
         <div className="App">
           <Switch>
             <Route
-              path="/login"
-              render={routeProps => (
-                <Login {...routeProps} onUserLogedIn={this.onUserLogedIn} />
-              )}
-            />
-            <Route
               path="/recipe/:recipeId"
               render={routeProps =>
                 this.state.loginStatus ? (
@@ -47,7 +41,16 @@ class App extends React.Component {
                 )
               }
             />
-            <Route path="not-found" component={NotFound} />
+
+            <Route
+              path="/login"
+              render={routeProps => (
+                <Login {...routeProps} onUserLogedIn={this.onUserLogedIn} />
+              )}
+            />
+
+            <Route path="/not-found" component={NotFound} />
+
             <Route
               path="/recipe"
               render={() => (
@@ -57,6 +60,7 @@ class App extends React.Component {
                 />
               )}
             />
+
             <Route
               exact
               path="/"
@@ -67,6 +71,7 @@ class App extends React.Component {
                 />
               )}
             />
+
             <Route component={NotFound} />
           </Switch>
         </div>
